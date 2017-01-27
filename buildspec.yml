@@ -8,6 +8,7 @@ phases:
       - curl -O https://bootstrap.pypa.io/get-pip.py
       - python get-pip.py
       - yes | pip install awscli
+      - apt-get install -y docker.io
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION)
   build:
