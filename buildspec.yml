@@ -3,11 +3,6 @@ version: 0.1
 phases:
   pre_build:
     commands:
-      - echo Installing AWS CLI
-      - apt-get install -y python
-      - curl -O https://bootstrap.pypa.io/get-pip.py
-      - python get-pip.py
-      - yes | pip install awscli
       - apt-get install -y docker.io
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION)
