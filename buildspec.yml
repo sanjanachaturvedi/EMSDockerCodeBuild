@@ -27,5 +27,5 @@ phases:
       
   artifacts:
   files:
-    - target/messageUtil-1.0.jar
-  discard-paths: yes
+      - target/messageUtil-1.0.jar
+        discard-paths: yes
